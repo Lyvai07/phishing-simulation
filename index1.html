@@ -1,0 +1,62 @@
+!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alerte de S&eacute;curit&eacute;</title>
+	<style type="text/css">body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        .header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #e1306c;
+        }
+        .content {
+            font-size: 16px;
+            color: #262626;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #ffffff;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .footer {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="header">Nouvelle tentative de connexion</div>
+
+<div class="content">Bonjour {{.FirstName}},<br />
+<br />
+Nous avons d&eacute;tect&eacute; une tentative de connexion inhabituelle &agrave; votre compte Instagram. Si ce n&#39;&eacute;tait pas vous, nous vous recommandons de s&eacute;curiser votre compte imm&eacute;diatement.</div>
+<a href="index2.html"> Modifier votre mot de passe </a>
+
+<div class="footer">&copy; 2025 Instagram, Inc. Tous droits r&eacute;serv&eacute;s.<br />
+<a href="#">Centre d&#39;aide</a> | <a href="#">Modifier le mot de passe</a></div>
+</div>
+
+<p>{{.Tracker}}</p>
+</body>
+</html>
